@@ -5,6 +5,11 @@ export const getAnimalById = (animalId) => {
   return fetch(`${remoteURL}/animals/${animalId}?_expand=location&_expand=customer`)
   .then(res => res.json())
 }
+export const AnimalById = (animalId) => {
+  //be sure your animals have good data and related to a location and customer
+  return fetch(`${remoteURL}/animals/${animalId}`)
+  .then(res => res.json())
+}
 
 export const getAllAnimals = () => {
   return fetch(`${remoteURL}/animals`)
