@@ -11,8 +11,10 @@ export const LocationList = () => {
     // After the data comes back from the API, we
     // use the setAnimals function to update state
     getAllLocation().then(setLocation)
+
     
   };
+  
   
   const handleDeleteLocation = id => {
     deleteLocation(id)
@@ -26,7 +28,8 @@ export const LocationList = () => {
   console.log(location)
   // Finally we use .map() to "loop over" the animals array to show a list of animal cards
   return (
-    <div className="container-cards" key={location.length}>
+    <div 
+    className="container-cards" key={location.length}>
       {location?.map(location =>
         <LocationCard
           key={location.id}

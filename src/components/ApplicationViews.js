@@ -44,7 +44,7 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
 
         <Route exact path="/login" element={<Login setAuthUser={setAuthUser} />} />
         <Route exact path="/register" element={<Register />} /> 
-        <Route exact path="/locations" element={<LocationCard />} /> 
+        {/* <Route exact path="/locations" element={<LocationCard />} />  */}
 
         {/* Render the animal list when http://localhost:3000/animals  */}
          <Route exact path="/animals" element={
