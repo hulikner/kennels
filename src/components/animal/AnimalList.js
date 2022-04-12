@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-//import the components we will need
+import { useNavigate } from "react-router-dom"
 import { AnimalCard } from './AnimalCard';
 import { getAllAnimals, deleteAnimal, getAnimalById } from '../../Modules/AnimalManager';
 
@@ -25,7 +25,22 @@ export const AnimalList = () => {
   }, []);
 
   // Finally we use .map() to "loop over" the animals array to show a list of animal cards
+  
+  const navigate = useNavigate();
+   <>
+  //add this button above your display of animal cards
+  <section className="section-content">
+    <button type="button"
+        className="btn"
+        onClick={() => {navigate("/animals/create")}}>
+        Admit Animal
+    </button>
+  </section>
+  </>
   return (
+
+ 
+
     <div className="container-cards" key={animals.length}>
       {animals?.map(animal =>
         <AnimalCard

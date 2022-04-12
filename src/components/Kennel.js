@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import { NavBar } from "./nav/NavBar"
-import "./Kennel.css"
 import { ApplicationViews } from "./ApplicationViews"
+import "./Kennel.css"
 
 export const Kennel = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(sessionStorage.getItem("kennel_customer") !== null)
@@ -15,15 +15,11 @@ export const Kennel = () => {
         sessionStorage.clear();
         setIsAuthenticated(sessionStorage.getItem("kennel_customer") !== null)
       }
-    
-      return (
+
+    return (
         <>
             <NavBar clearUser={clearUser} isAuthenticated={isAuthenticated}/>
-            <ApplicationViews 
-                setAuthUser={setAuthUser}
-                isAuthenticated={isAuthenticated}
-                setIsAuthenticated={setIsAuthenticated}
-            />
+            <ApplicationViews setAuthUser={setAuthUser} isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />
         </>
     )
 }
