@@ -1,3 +1,4 @@
+/* src/components/Kennel.css */
 /* Import the google web fonts you want to use */
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
 
@@ -40,4 +41,18 @@ address {
 
 .container-cards {
 	display: flex;
+}
+Animal Styles
+src/components/animal/Animal.css
+.animals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.animal {
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid goldenrod;
 }

@@ -49,7 +49,7 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
                     <AnimalList />
                  </PrivateRoute>
             } /> 
-         <Route exact path="/animals/:animalId" element={<AnimalDetail />} /> 
+         <Route exact path="/animals" element={<AnimalDetail />} /> 
          <Route path="/animals/:animalId/edit" element={
           <PrivateRoute>
              <AnimalEditForm />
