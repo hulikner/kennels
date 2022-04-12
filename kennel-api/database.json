@@ -1,63 +1,82 @@
 {
-    "animals": [
-        { "id": 1, "name": "Doodles", "breed": "Poodle"},
-        { "id": 2, "name": "Decker", "breed": "German Shepherd" },
-        { "id": 3, "name": "Esme", "breed": "Pitbull" },
-        { "id": 4, "name": "Pepper", "breed": "Shih-zu"},
-        { "id": 5, "name": "Salt", "breed": "Malti-Poo" },
-        { "id": 6, "name": "Dog", "breed": "Bad Dog" }
-    ],
-    "customers": [
-        {
-            "id": 1,
-            "name": "Hannah Hall",
-            "address": "7002 Chestnut Ct"
-        },
-        {
-            "id": 2,
-            "name": "Hann Ha",
-            "address": "70 Chestnut Ct"
-        },
-        {
-            "id": 3,
-            "name": "Jo Schmo",
-            "address": "7002 Chestnut Ct"
-        }
-    ],
-    "employees": [
-        {
-            "id": 1,
-            "name": "Derick Cravens",
-            "email": "derick@nss.com",
-            "employee": true
-        },
-        {
-            "id": 2,
-            "name": "Derick Cravens",
-            "email": "derick@nss.com",
-            "employee": true
-        }
-    ],
-    "locations": [
-        {
-            "id": 1,
-            "name": "Nashville North",
-            "address": "8422 Johnson Pike"
-        },
-        {
-            "id": 2,
-            "name": "Nashville South",
-            "address": "209 Emory Drive"
-        },
-        {
-            "id": 3,
-            "name": "North",
-            "address": "842 John Pike"
-        },
-        {
-            "id": 4,
-            "name": "South",
-            "address": "20 Emo Drive"
-        }
-    ]
+  "animals": [
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle"
+    },
+    {
+      "id": 2,
+      "name": "Decker",
+      "breed": "German Shepherd"
+    },
+    {
+      "id": 4,
+      "name": "Pepper",
+      "breed": "Shih-zu"
+    },
+    {
+      "id": 5,
+      "name": "Salt",
+      "breed": "Malti-Poo"
+    },
+    {
+      "id": 6,
+      "name": "Dog",
+      "breed": "Bad Dog"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Hannah Hall",
+      "address": "7002 Chestnut Ct"
+    },
+    {
+      "id": 2,
+      "name": "Hann Ha",
+      "address": "70 Chestnut Ct"
+    },
+    {
+      "id": 3,
+      "name": "Jo Schmo",
+      "address": "7002 Chestnut Ct"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Derick Cravens",
+      "email": "derick@nss.com",
+      "employee": true
+    },
+    {
+      "id": 2,
+      "name": "Derick Cravens",
+      "email": "derick@nss.com",
+      "employee": true
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Nashville North",
+      "address": "8422 Johnson Pike"
+    },
+    {
+      "id": 2,
+      "name": "Nashville South",
+      "address": "209 Emory Drive"
+    },
+    {
+      "id": 3,
+      "name": "North",
+      "address": "842 John Pike"
+    },
+    {
+      "id": 4,
+      "name": "South",
+      "address": "20 Emo Drive"
+    }
+  ]
 }

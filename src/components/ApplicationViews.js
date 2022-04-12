@@ -9,13 +9,16 @@ import { CustomerList } from "./Customers/CustomerList"
 import { CustomerDetail } from "./Customers/CustomerDetail";
 import { Login, setAuthUser} from "./auth/Login"
 import { Register } from "./auth/Register"
-import { LocationsCard } from "./Locations/LocationsCard"
 import { AnimalEditForm } from "./animal/AnimalEditForm"
 import { CustomerEditForm } from "./Customers/CustomerEditForm"
 import { EmployeeEditForm } from "./Employees/EmployeeEditForm"
 import { EmployeeCard } from "./Employees/EmployeeCard"
 import { EmployeeList } from "./Employees/EmployeeList"
 import { EmployeeDetail } from "./Employees/EmployeeDetail";
+import { LocationEditForm } from "./Locations/LocationEditForm"
+import { LocationCard } from "./Locations/LocationCard"
+import { LocationList } from "./Locations/LocationList"
+import { LocationDetail } from "./Locations/LocationDetail";
 
 
 
@@ -41,7 +44,7 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
 
         <Route exact path="/login" element={<Login setAuthUser={setAuthUser} />} />
         <Route exact path="/register" element={<Register />} /> 
-        <Route exact path="/locations" element={<LocationsCard />} /> 
+        <Route exact path="/locations" element={<LocationCard />} /> 
 
         {/* Render the animal list when http://localhost:3000/animals  */}
          <Route exact path="/animals" element={
@@ -75,6 +78,17 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
          <Route path="/employees/:employeesId/edit" element={
           <PrivateRoute>
              <EmployeeEditForm />
+         </PrivateRoute>
+        } /> 
+        <Route exact path="/locations" element={
+                <PrivateRoute>
+                    <LocationList />
+                 </PrivateRoute>
+            } /> 
+         <Route exact path="/locations/:locationId" element={<LocationDetail />} /> 
+         <Route path="/locations/:locationsId/edit" element={
+          <PrivateRoute>
+             <LocationEditForm />
          </PrivateRoute>
         } /> 
         </Routes>
