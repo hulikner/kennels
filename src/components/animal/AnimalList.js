@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom"
 import { AnimalCard } from './AnimalCard';
 import { getAllAnimals, deleteAnimal, getAnimalById } from '../../Modules/AnimalManager';
-
+import './AnimalList.css'
 
 export const AnimalList = () => {
   // The initial state is an empty array
@@ -29,25 +29,32 @@ export const AnimalList = () => {
   const navigate = useNavigate();
   return (
 
-   <>
+  
 
   <section className="section-content">
-    <button type="button"
-        className="btn"
-        onClick={() => {navigate("/animals/create")}}>
-        Admit Animal
-    </button>
-  </section>
+ 
  
  
 
     <div className="container-cards" key={animals.length}>
+    <button type="button"
+        className="btn-add"
+        onClick={() => {navigate("/animals/create")}}>
+        Admit Animal
+    </button>
+    <div className='card-list'>
       {animals?.map(animal =>
+      <div className='card-item'>
         <AnimalCard
-          key={animal.id}
-          animal={animal}
-          handleDeleteAnimal={handleDeleteAnimal} />)}
+        key={animal.id}
+        animal={animal}
+        handleDeleteAnimal={handleDeleteAnimal} />
+        </div>
+        )}
+
     </div>
-    </>
+    </div>
+
+        </section>
   );
 };

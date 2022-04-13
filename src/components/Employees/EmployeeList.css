@@ -1,0 +1,19 @@
+.container-cards{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 20px;
+}
+
+.btn-add{
+ max-width: fit-content;
+ align-self: center;
+}
+
+.card-list{
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+.card-item{
+    flex-basis: 30%;
+}

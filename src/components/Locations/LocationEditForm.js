@@ -5,7 +5,7 @@ import "./LocationEditForm.css"
 
 
 export const LocationEditForm = () => {
-  const [location, setLocation] = useState({ name: "", email: "" });
+  const [location, setLocation] = useState({ name: "", address: "" });
   const [isLoading, setIsLoading] = useState(false);
 
   const {locationId} = useParams();
@@ -26,9 +26,7 @@ export const LocationEditForm = () => {
     const editedLocation = {
       id: locationId,
       name: location.name,
-      email: location.email,
-	    locationId: 1,
-	    locationId: 1
+      address: location.address,
     };
 
   //pass the editedAnimal object to the database
@@ -38,13 +36,15 @@ export const LocationEditForm = () => {
   }
 
   useEffect(() => {
+    console.log(locationId)
     getLocationById(locationId)
       .then(location => {
+        console.log(location)
         setLocation(location);
         setIsLoading(false);
       });
   }, []);
-
+console.log(location)
   return (
     <>
       <form>
@@ -65,8 +65,8 @@ export const LocationEditForm = () => {
               required
               className="form-control"
               onChange={handleFieldChange}
-              id="location"
-              value={location.id}
+              id="address"
+              value={location.address}
             />
             <label htmlFor="location">Address</label>
           </div>
