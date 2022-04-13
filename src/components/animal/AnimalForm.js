@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { addAnimal } from '../../modules/AnimalManager';
+import { addAnimal } from '../../Modules/AnimalManager';
+import { getAllCustomers } from '../../Modules/CustomerManager';
+import { getAllLocation } from '../../Modules/LocationManager';
 import './AnimalForm.css'
 
 export const AnimalForm = () => {
@@ -44,11 +46,8 @@ export const AnimalForm = () => {
 	}
 
     useEffect(() => {
-		//load location data and setState
-	}, []);
-
-     useEffect(() => {
-		//load customer data and setState
+        getAllLocation().then(setLocations)
+        getAllCustomers().then(setCustomers)
 	}, []);
 
 

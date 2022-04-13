@@ -2,7 +2,18 @@ import React from "react"
 import { BrowserRouter, Link } from "react-router-dom"
 import "./NavBar.css"
 
-export const NavBar = () => {
+
+export const NavBar = ({ clearUser, isAuthenticated }) => {
+    // const navigate = useNavigate()
+
+    // const handleLogout = () => {
+    //     clearUser();
+    //     navigate('/');
+    // }
+
+
+
+
     return (
         <BrowserRouter>
         
