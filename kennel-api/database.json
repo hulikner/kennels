@@ -3,27 +3,37 @@
     {
       "id": 1,
       "name": "Doodles",
-      "breed": "Poodle"
+      "breed": "Poodle",
+      "locationsId": 1,
+      "customersId": 1
     },
     {
       "id": 2,
       "name": "Decker",
-      "breed": "German Shepherd"
+      "breed": "German Shepherd",
+      "locationsId": 1,
+      "customersId": 2
     },
     {
       "id": 4,
       "name": "Pepper",
-      "breed": "Shih-zu"
+      "breed": "Shih-zu",
+      "locationsId": 2,
+      "customersId": 2
     },
     {
       "id": 5,
       "name": "Salt",
-      "breed": "Malti-Poo"
+      "breed": "Malti-Poo",
+      "locationsId": 1,
+      "customersId": 1
     },
     {
       "id": 6,
       "name": "Dog",
-      "breed": "Bad Dog"
+      "breed": "Bad Dog",
+      "locationsId": 3,
+      "customersId": 2
     }
   ],
   "customers": [

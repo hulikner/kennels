@@ -19,6 +19,9 @@ import { LocationEditForm } from "./Locations/LocationEditForm"
 import { LocationCard } from "./Locations/LocationCard"
 import { LocationList } from "./Locations/LocationList"
 import { LocationDetail } from "./Locations/LocationDetail";
+import { AnimalForm } from "./animal/AnimalForm"
+import { CustomerForm } from "./Customers/CustomerForm"
+
 
 
 
@@ -52,10 +55,21 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
                     <AnimalList />
                  </PrivateRoute>
             } /> 
-         <Route exact path="/animals" element={<AnimalDetail />} /> 
+
+        
+        <Route path="/animals/:animalId" element={
+            <PrivateRoute>
+            <AnimalDetail />
+            </PrivateRoute>
+        }/>
          <Route path="/animals/:animalId/edit" element={
           <PrivateRoute>
              <AnimalEditForm />
+         </PrivateRoute>
+        } /> 
+         <Route path="/animals/create" element={
+          <PrivateRoute>
+             <AnimalForm />
          </PrivateRoute>
         } /> 
          <Route exact path="/customers" element={
@@ -67,6 +81,11 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
          <Route path="/customers/:customersId/edit" element={
           <PrivateRoute>
              <CustomerEditForm />
+         </PrivateRoute>
+        } /> 
+         <Route path="/customers/create" element={
+          <PrivateRoute>
+             <CustomerForm />
          </PrivateRoute>
         } /> 
          <Route exact path="/employees" element={

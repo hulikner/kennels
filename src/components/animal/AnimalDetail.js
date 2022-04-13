@@ -4,7 +4,7 @@ import { useParams, useNavigate } from "react-router-dom"
 import "./AnimalDetail.css";
 
 export const AnimalDetail = () => {
-  const [animal, setAnimal] = useState({ name: "", breed: "" });
+  const [animal, setAnimal] = useState({name: '', breed: '', customers:{name: ''}, locations:{name:''}});
   const [isLoading, setIsLoading] = useState(true);
 
   const {animalId} = useParams();
@@ -20,24 +20,18 @@ export const AnimalDetail = () => {
 
   useEffect(() => {
     //getAnimalById(id) from AnimalManager and hang on to the data; put it into state
-    console.log("useEffect", animalId)
     getAnimalById(animalId)
-      .then(animal => {
-        setAnimal({
-          name: animal.name,
-          breed: animal.breed
-        });
-        setIsLoading(false);
-      });
+      .then(animal=>{
+        setAnimal(animal)
+      })
+     
   }, [animalId]);
-
   return (
     <section className="animal">
       <h3 className="animal__name">{animal.name}</h3>
-      <div className="animal__breed">{animal.breed}</div>
-      {/* What's up with the question mark???? */}
-      <div className="animal__location">Location: {animal.location?.name}</div>
-      <div className="animal__owner">Customer: {animal.customer?.name}</div>
+      <div className="animal__breed">Breed: {animal.breed}</div>
+      <div className="animal__location">Location: {animal.locations.name}</div>
+      <div className="animal__owner">Customer: {animal.customers.name}</div>
       <button type="button" disabled={isLoading} onClick={handleDelete}>
           Discharge
         </button>

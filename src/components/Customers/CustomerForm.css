@@ -1,0 +1,92 @@
+fieldset {
+    max-width: 40em;
+    padding: 10px;
+
+    border: 0 none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    background: aliceblue;
+}
+input{
+    min-width: 100%;
+}
+
+fieldset input, fieldset button, fieldset select{
+    box-sizing: border-box;
+    padding: .2em .4em;
+    outline: none;
+    box-shadow: none;
+}
+
+fieldset button {
+    max-width: 9em;
+    padding: .5em;
+    margin: .3em auto;
+    background-color: cornflowerblue;
+    border: none;
+    color: cornsilk;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 2px;
+    width: 100%;
+    cursor: pointer;
+}
+
+fieldset label {
+    box-sizing: border-box;
+    user-select: none;
+    cursor: pointer;
+    text-align: right;
+    font-size: 15px;
+}
+fieldset input:focus + label {
+    color: #933;
+}
+
+fieldset .formgrid {
+    display: grid;
+    grid-template-columns: 1fr 1em 2fr;
+    grid-gap: .3em .6em;
+    grid-auto-flow: dense;
+    align-items: center;
+}
+
+fieldset input, fieldset button, fieldset select {
+    grid-column: 2 /4;
+    width: auto;
+    margin: 0
+}
+
+fieldset .alignRight {
+    text-align: right;
+}
+.customerForm{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 20px;
+    align-items: flex-start;
+}
+.customerForm > fieldset{
+    margin: 0;
+    min-width: 40em;
+}
+.customerForm__title{
+    margin: 0
+}
+.btn-primary{
+    margin-top: 20px;
+    min-width: 100px;
+    background-color: aliceblue;
+    color: orangered;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 5px;
+    border-color: aliceblue;
+}
+.btn-primary:hover{
+    background-color: orangered;
+    color: aliceblue;
+}

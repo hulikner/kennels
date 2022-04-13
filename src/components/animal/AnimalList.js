@@ -27,8 +27,10 @@ export const AnimalList = () => {
   // Finally we use .map() to "loop over" the animals array to show a list of animal cards
   
   const navigate = useNavigate();
+  return (
+
    <>
-  //add this button above your display of animal cards
+
   <section className="section-content">
     <button type="button"
         className="btn"
@@ -36,9 +38,7 @@ export const AnimalList = () => {
         Admit Animal
     </button>
   </section>
-  </>
-  return (
-
+ 
  
 
     <div className="container-cards" key={animals.length}>
@@ -48,5 +48,6 @@ export const AnimalList = () => {
           animal={animal}
           handleDeleteAnimal={handleDeleteAnimal} />)}
     </div>
+    </>
   );
 };
