@@ -20,6 +20,7 @@ import { LocationCard } from "./Locations/LocationCard"
 import { LocationList } from "./Locations/LocationList"
 import { LocationDetail } from "./Locations/LocationDetail";
 import { AnimalForm } from "./animal/AnimalForm"
+import { LocationForm } from "./Locations/LocationForm"
 import { CustomerForm } from "./Customers/CustomerForm"
 
 
@@ -39,7 +40,7 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
     }
     return (
         
-        <BrowserRouter>
+     
         <Routes>
 
         {/* Render the location list when http://localhost:3000/  */}
@@ -55,8 +56,6 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
                     <AnimalList />
                  </PrivateRoute>
             } /> 
-
-        
         <Route path="/animals/:animalId" element={
             <PrivateRoute>
             <AnimalDetail />
@@ -72,13 +71,20 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
              <AnimalForm />
          </PrivateRoute>
         } /> 
+
+
          <Route exact path="/customers" element={
                 <PrivateRoute>
                     <CustomerList />
                  </PrivateRoute>
             } /> 
-         <Route exact path="/customers/:customerId" element={<CustomerDetail />} /> 
-         <Route path="/customers/:customersId/edit" element={
+         <Route exact path="/customers/:customerId" element={
+             <PrivateRoute>
+
+                 <CustomerDetail />
+             </PrivateRoute>
+         } /> 
+         <Route path="/customers/:customerId/edit" element={
           <PrivateRoute>
              <CustomerEditForm />
          </PrivateRoute>
@@ -94,25 +100,33 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
                  </PrivateRoute>
             } /> 
          <Route exact path="/employees/:employeeId" element={<EmployeeDetail />} /> 
-         <Route path="/employees/:employeesId/edit" element={
+         <Route path="/employees/:employeeId/edit" element={
           <PrivateRoute>
              <EmployeeEditForm />
          </PrivateRoute>
         } /> 
-        <Route exact path="/locations" element={
-                <PrivateRoute>
-                    <LocationList />
-                 </PrivateRoute>
-            } /> 
-         <Route exact path="/locations/:locationId" element={<LocationDetail />} /> 
-         <Route path="/locations/:locationsId/edit" element={
+
+
+        <Route exact path="/locations" element={<LocationList />} /> 
+        <Route path="/locations/create" element={
+          <PrivateRoute>
+             <LocationForm />
+         </PrivateRoute>
+        } /> 
+         <Route exact path="/locations/:locationId" element={
+             <PrivateRoute>
+                 <LocationDetail />
+             </PrivateRoute>
+         
+         } /> 
+         <Route path="/locations/:locationId/edit" element={
           <PrivateRoute>
              <LocationEditForm />
          </PrivateRoute>
         } /> 
+
         </Routes>
-        
-        </BrowserRouter>
+
 
             
      

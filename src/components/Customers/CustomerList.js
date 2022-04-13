@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { CustomerCard } from './CustomerCard';
 import { getAllCustomers, deleteCustomer, getCustomerById } from '../../Modules/CustomerManager';
 import { Navigate, useNavigate } from 'react-router-dom';
-
+import './CustomerList.css'
 
 export const CustomerList = () => {
   // The initial state is an empty array
@@ -28,21 +28,29 @@ export const CustomerList = () => {
   // Finally we use .map() to "loop over" the animals array to show a list of animal cards
   return (
 
-    <>
-    <section className="section-content">
-      <button type="button"
-          className="btn"
+  
+
+    <div className="container-cards" key={customers.length}>
+    <button type="button"
+          className="btn-add"
           onClick={() => {navigate("/customers/create")}}>
           New Customer
       </button>
-    </section>
-    <div className="container-cards" key={customers.length}>
+      <div className='card-list'>
       {customers?.map(customer =>
+      <div className='card-item'>
+
         <CustomerCard
           key={customer.id}
           customer={customer}
-          handleDeleteCustomer={handleDeleteCustomer} />)}
+          handleDeleteCustomer={handleDeleteCustomer} />
+      </div>
+          
+          )}
+
+
+      </div>
     </div>
-    </>
+  
   );
 };

@@ -3,9 +3,11 @@
     {
       "id": 1,
       "name": "Doodles",
-      "breed": "Poodle",
+      "breed": "Big",
       "locationsId": 1,
-      "customersId": 1
+      "customersId": 1,
+      "locationId": 1,
+      "customerId": 1
     },
     {
       "id": 2,
@@ -87,6 +89,16 @@
       "id": 4,
       "name": "South",
       "address": "20 Emo Drive"
+    },
+    {
+      "name": "Lebanon",
+      "address": "503 Coles Ferry Pike",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "name": "Mt. Juliet",
+      "address": "idk"
     }
   ]
 }
